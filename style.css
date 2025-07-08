@@ -1,0 +1,159 @@
+/* General Layout */
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background: linear-gradient(to bottom, #004080, #0073e6);
+  color: white;
+  padding: 2em 1em;
+}
+
+.sidebar h2 {
+  margin-bottom: 1.5em;
+  text-align: center;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.sidebar nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.sidebar nav a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Main Area */
+.main-content {
+  flex-grow: 1;
+  padding: 2em;
+  overflow-y: auto;
+}
+
+.main-header {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5em;
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card h3, .card p {
+  padding: 1em;
+}
+
+/* Forms */
+.form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.form input, .form select, .form textarea {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.form button {
+  padding: 10px;
+  background-color: #004080;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Auth Pages */
+.auth-body {
+  background: linear-gradient(to right, #004080, #0073e6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.auth-container {
+  background: white;
+  padding: 2em 3em;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.colorful-form {
+  background: linear-gradient(120deg, #f0f8ff, #e6f7ff);
+  min-height: 100%;
+  padding-top: 3em;
+}
+
+.form-card {
+  background: #ffffff;
+  border-radius: 12px;
+  max-width: 600px;
+  margin: auto;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  padding: 2em;
+}
+
+.form-title {
+  font-size: 1.8em;
+  margin-bottom: 1em;
+  color: #004080;
+  text-align: center;
+}
+
+.sidebar a.active {
+  background: rgba(255, 255, 255, 0.25);
+  font-weight: bold;
+}
